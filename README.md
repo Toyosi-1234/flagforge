@@ -78,12 +78,4 @@ The included tests cover health and rejection of unauthenticated admin/SDK reque
 
 Models are defined for accounts, users, projects, environments, SDK keys, flags, immutable flag versions, audit entries, plans, usage records, payments, and webhook events.
 
-## Important next steps before production
 
-- Add email verification, password reset, invitation flow, and stricter registration controls.
-- Add account/tenant authorization tests for every route.
-- Add project/environment SDK key rotation and revocation endpoints.
-- Project creation uses compensating cleanup so it also runs on a standard local standalone MongoDB instance. For production workflows spanning many documents, prefer replica-set transactions where supported.
-- Add flag CRUD with immutable version/audit writes, then evaluation logic and Redis.
-- Add structured logging, request IDs, security monitoring, backups, and deployment secrets management.
-- Implement Squad sandbox only with real Squad sandbox credentials and documented webhook verification; never accept client-side payment claims.
